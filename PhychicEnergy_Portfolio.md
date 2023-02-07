@@ -1,3 +1,14 @@
+<head>
+<style>
+.bg-gray{
+  background-color: #F0F0F0;
+}
+</style>
+</head>
+
+<body style="background-color: #black">
+<div class="bg-gray">
+
 # **PhychicEnergy**
 
 河原電子ビジネス専門学校  
@@ -79,8 +90,9 @@
 
 </font>
 
-<img alt="操作説明_左" src="image/controllerOperation_left.png">
-<img alt="操作説明_右" src="image/controllerOperation_right.png">
+&emsp;<img alt="操作説明_左" src="image/controllerOperation_left.png">
+
+&emsp;<img alt="操作説明_右" src="image/controllerOperation_right.png">
 
 # **3. 担当ソースコード**
 
@@ -246,7 +258,7 @@
   ※接触している面の法線を取得できるように変更
 - Matrix 
   - Matrix.h  
-  ※行列同士の比較がするために==を使えるように変更
+  ※行列同士の比較をするために==を使えるように変更
 - Vector
   - Vector.h  
   ※Vector4クラスにLerp関数を追加し、線形補間をできるように変更
@@ -283,10 +295,12 @@
 
 **プレイヤーの平行移動行列の逆行列** とは、 **「プレイヤーの平行移動行列に乗算するとプレイヤーがワールド座標の原点に移動する行列」** のことです。
 
-<img alt="inverseMatrix" src="image/inverseMatrix.png">  
+&emsp;<img alt="inverseMatrix" src="image/inverseMatrix.png">  
 
 よってプレイヤーの平行移動行列の逆行列を乗算した場合、オブジェクトがこのように移動する。
-<img alt="multiply_1" src="image/multiply_1.png">    
+
+&emsp;<img alt="multiply_1" src="image/multiply_1.png">    
+
 この座標はプレイヤーが世界の原点であると仮定した場合の座標となる。
 
 <br>
@@ -296,7 +310,9 @@
 </font>
 
 オブジェクトを90度回転させる回転行列の場合
-<img alt="multiply_2" src="image/multiply_2.png">  
+
+&emsp;<img alt="multiply_2" src="image/multiply_2.png">  
+
 ワールド座標の原点を中心として回転するため、
 <font size="3">
 
@@ -309,7 +325,7 @@
 ### 6. 5で計算された行列に対して、2で計算したプレイヤーの平行移動行列を乗算する。
 </font>
 
-<img alt="multiply_3" src="image/multiply_3.png">  
+&emsp;<img alt="multiply_3" src="image/multiply_3.png">  
 
 プレイヤーの平行移動行列を乗算する理由としては、現在はプレイヤーを世界の原点と仮定した計算を行ったワールド座標となっているため、プレイヤーの平行移動行列の逆行列の逆行列である、プレイヤーの平行移動行列を乗算することで、世界の原点を元のワールド座標の原点とした時のワールド座標にしている。  
 <br>
@@ -317,7 +333,8 @@
 
 ### 計算後
 </font>
-<img alt="afterRotation" src="image/afterRotation.png">
+
+&emsp;<img alt="afterRotation" src="image/afterRotation.png">
 
 
 
@@ -348,5 +365,10 @@
 よって、対象がカメラから近い時はフロントカリングを行ったモデルから作った輪郭線がポストエフェクトによる輪郭線よりも大きくなり、最終的に描画された時に見やすい。逆に対象がカメラから遠い場合には、ポストエフェクトの輪郭線の方が大きくなり、最終的に描画された時に最低限の輪郭線の大きさを失わない。
 
 
+
+
+
+
+</div>
 
 
