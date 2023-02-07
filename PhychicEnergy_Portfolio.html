@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PhychicEnergy_Portfolio.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="phychicenergy"><strong>PhychicEnergy</strong></h1>
+<p>河原電子ビジネス専門学校</p>
+<p>ゲームクリエイター科2年　長山宏毅</p>
+<h1 id="%E7%9B%AE%E6%AC%A1"><strong>目次</strong></h1>
+<font size = "3">
+<ol>
+<li><a href="#1-%E4%BD%9C%E5%93%81%E6%A6%82%E8%A6%81">作品概要</a></li>
+<li><a href="#2-%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E">操作説明</a></li>
+<li><a href="#3-%E6%8B%85%E5%BD%93%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">担当ソースコード</a></li>
+<li><a href="#4-%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E5%81%B4%E3%81%AE%E6%94%B9%E9%80%A0%E3%81%97%E3%81%9F%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">エンジン側の改造したソースコード</a></li>
+<li><a href="#5-%E6%8A%80%E8%A1%93%E7%B4%B9%E4%BB%8B">技術紹介</a><br>
+5.1. <a href="#51-%E4%B8%96%E7%95%8C%E3%81%AE%E5%9B%9E%E8%BB%A2">世界の回転</a><br>
+5.2. <a href="#52-pbr">PBR</a><br>
+5.3. <a href="#53-%E8%BC%AA%E9%83%AD%E7%B7%9A">輪郭線</a></li>
+</ol>
+</font>
+<p><br>.</p>
+<h1 id="1-%E4%BD%9C%E5%93%81%E6%A6%82%E8%A6%81"><strong>1. 作品概要</strong></h1>
+<h2 id="phychicenergy"><strong>PhychicEnergy</strong></h2>
+<p> 三人称視点のタイムアタック型のアクションゲームです。<br>
+ プレイヤーはモードを変更することで浮遊することができます。<br>
+ 浮遊状態の時にオブジェクトに向かって飛ぶことによってぶつかった場所に張り付くことができます。<br>
+ この力を駆使して、短い時間でマップ上にある全てのリングを取得することが目的です。<br>
+<br></p>
+<ul>
+<li>
+<p>制作人数</p>
+<ul>
+<li>1人</li>
+</ul>
+</li>
+<li>
+<p>プレイ人数</p>
+<ul>
+<li>1人</li>
+</ul>
+</li>
+<li>
+<p>制作期間</p>
+<ul>
+<li>2022年9月～2023年2月</li>
+</ul>
+</li>
+<li>
+<p>開発環境</p>
+<ul>
+<li>OS
+<ul>
+<li>Windows 10</li>
+</ul>
+</li>
+<li>エンジン
+<ul>
+<li>学校内製の低レベルエンジンを改造したもの(DirectX 12)</li>
+</ul>
+</li>
+<li>ツール
+<ul>
+<li>プログラミング
+<ul>
+<li>Visual Studio 2019</li>
+</ul>
+</li>
+<li>モデル
+<ul>
+<li>3ds Max 2020</li>
+<li>VRoid</li>
+</ul>
+</li>
+<li>テクスチャ
+<ul>
+<li>Adobe Photoshop 2023</li>
+</ul>
+</li>
+<li>エフェクト
+<ul>
+<li>Effekseer</li>
+</ul>
+</li>
+<li>データ管理
+<ul>
+<li>git</li>
+</ul>
+</li>
+<li>タスク・スケジュール管理
+<ul>
+<li>Notion</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+<h1 id="2-%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E"><strong>2. 操作説明</strong></h1>
+<h3 id="xbox%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC"><strong>Xboxコントローラー</strong></h3>
+<font size = "3">
+<ul>
+<li>LTボタン - スライディング</li>
+<li>LBボタン - 浮遊状態を解除</li>
+<li>左スティック - 移動</li>
+<li>右スティック - カメラを回転</li>
+<li>RBボタン
+<ul>
+<li>通常時 - 浮遊の静止状態に移行</li>
+<li>浮遊の静止時 - カメラの方向に向かって移動</li>
+<li>浮遊の移動時 - 浮遊の静止状態に移行</li>
+</ul>
+</li>
+<li>RTボタン - ロックオン</li>
+<li>Aボタン - ジャンプ</li>
+</ul>
+</font>
+<img alt="操作説明_左" src="image/controllerOperation_left.png">
+<img alt="操作説明_右" src="image/controllerOperation_right.png">
+<h1 id="3-%E6%8B%85%E5%BD%93%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89"><strong>3. 担当ソースコード</strong></h1>
+<details><summary>メイン側ソースコード(.h , .cpp)</summary>
+<ul>
+<li>Title
+<ul>
+<li>Title
+<ul>
+<li>Title.h</li>
+<li>Title.cpp</li>
+</ul>
+</li>
+<li>BackGround
+<ul>
+<li>TitleBackGround.h</li>
+<li>TitleBackGround.cpp</li>
+</ul>
+</li>
+<li>Camera
+<ul>
+<li>TitleCamera.h</li>
+<li>TitleCamera.cpp</li>
+</ul>
+</li>
+<li>Sprite
+<ul>
+<li>TitleSprite.h</li>
+<li>TitleSprite.cpp</li>
+</ul>
+</li>
+<li>BGM
+<ul>
+<li>TitleBGM.h</li>
+<li>TitleBGM.cpp</li>
+</ul>
+</li>
+<li>Character
+<ul>
+<li>TitleCharacter.h</li>
+<li>TitleCharacter.cpp</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>InGame
+<ul>
+<li>Game
+<ul>
+<li>Game.h</li>
+<li>Game.cpp</li>
+</ul>
+</li>
+<li>Player
+<ul>
+<li>IPlayerState.h</li>
+<li>Player.h</li>
+<li>Player.cpp</li>
+<li>PlayerIdleState.h</li>
+<li>PlayerIdleState.cpp</li>
+<li>PlayerWalkState.h</li>
+<li>PlayerWalkState.cpp</li>
+<li>PlayerJumpState.h</li>
+<li>PlayerJumpState.cpp</li>
+<li>PlayerSlideState.h</li>
+<li>PlayerSlideState.cpp</li>
+<li>PlayerFallState.h</li>
+<li>PlayerFallState.cpp</li>
+<li>PlayerIdleInAirState.h</li>
+<li>PlayerIdleInAirState.cpp</li>
+<li>PlayerFallInAirState.h</li>
+<li>PlayerFallInAirState.cpp</li>
+</ul>
+</li>
+<li>Ring
+<ul>
+<li>Ring.cpp</li>
+<li>Ring.h</li>
+</ul>
+</li>
+<li>BGM
+<ul>
+<li>MainBGM.h</li>
+<li>MainBGM.cpp</li>
+</ul>
+</li>
+<li>Fade
+<ul>
+<li>Fade.h</li>
+<li>Fade.cpp</li>
+</ul>
+</li>
+<li>Timer
+<ul>
+<li>DisplayGameTimer.h</li>
+<li>DisplayGameTimer.cpp</li>
+</ul>
+</li>
+<li>LockOn
+<ul>
+<li>LockOn.h</li>
+<li>LockOn.cpp</li>
+</ul>
+</li>
+<li>GravityGauge
+<ul>
+<li>GravityGauge.h</li>
+<li>GravityGauge.cpp</li>
+</ul>
+</li>
+<li>Sight
+<ul>
+<li>Sight.h</li>
+<li>Sight.cpp</li>
+</ul>
+</li>
+<li>BackGround
+<ul>
+<li>BackGround.h</li>
+<li>BackGround.cpp</li>
+</ul>
+</li>
+<li>Camera
+<ul>
+<li>GameCamera.h</li>
+<li>GameCamera.cpp</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Result
+<ul>
+<li>Result
+<ul>
+<li>Result.h</li>
+<li>Result.cpp</li>
+</ul>
+</li>
+<li>BGM
+<ul>
+<li>ResultBGM.h</li>
+<li>ResultBGM.cpp</li>
+</ul>
+</li>
+<li>Sprite
+<ul>
+<li>ResultSprite.h</li>
+<li>ResuleSprite.cpp</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+<details><summary>エンジン側ソースコード(.h , .cpp)</summary>
+<ul>
+<li>RenderingEngine
+<ul>
+<li>RenderingEngine.h</li>
+<li>RenderingEngine.cpp</li>
+</ul>
+</li>
+<li>ModelRender
+<ul>
+<li>ModelRender.h</li>
+<li>ModelRender.cpp</li>
+</ul>
+</li>
+<li>Level
+<ul>
+<li>MapChipRender.h</li>
+<li>MapChipRender.cpp</li>
+<li>LevelRender.h</li>
+<li>LevelRender.cpp</li>
+</ul>
+</li>
+<li>PostEffect
+<ul>
+<li>PostEffect.h</li>
+<li>PostEffect.cpp</li>
+<li>OutLine.h</li>
+<li>OutLine.cpp</li>
+<li>Fxaa.h</li>
+<li>Fxaa.cpp</li>
+</ul>
+</li>
+<li>Lighting
+<ul>
+<li>SceneLight.h</li>
+<li>SceneLight.cpp</li>
+<li>MyRenderer.h</li>
+</ul>
+</li>
+<li>Geometry
+<ul>
+<li>GeometryData.h</li>
+<li>GeometryData.cpp</li>
+<li>SceneGeometryData.h</li>
+<li>SceneGeometryData.cpp</li>
+</ul>
+</li>
+<li>SkyCube
+<ul>
+<li>SkyCube.h</li>
+<li>SkyCube.cpp</li>
+</ul>
+</li>
+<li>Shadow
+<ul>
+<li>ShadowMapRender.h</li>
+<li>ShadowMapRender.cpp</li>
+<li>CascadeShadowMapMatrix.h</li>
+<li>CascadeShadowMapMatrix.cpp</li>
+</ul>
+</li>
+<li>Camera
+<ul>
+<li>SpringCamera.h</li>
+<li>SpringCamera.cpp</li>
+<li>CameraCollisionSolver.h</li>
+<li>CameraCollisionSolver.cpp</li>
+</ul>
+</li>
+<li>SpriteRender
+<ul>
+<li>SpriteRender.h</li>
+<li>SpriteRender.cpp</li>
+</ul>
+</li>
+<li>ToonMap
+<ul>
+<li>ToonMap.h</li>
+<li>ToonMap.cpp</li>
+</ul>
+</li>
+<li>WorldRotation
+<ul>
+<li>WorldRotation.h</li>
+<li>WorldRotation.cpp</li>
+</ul>
+</li>
+</ul>
+</details>
+<details><summary>シェーダー(.fx)</summary>
+<ul>
+<li>fxaa.fx</li>
+<li>outline.fx</li>
+<li>blackBackModel.fx</li>
+<li>depthForOutLine.fx</li>
+<li>drawShadowMap.fx</li>
+<li>gravityGauge.fx</li>
+<li>pbr.fx</li>
+<li>redBackModel.fx</li>
+<li>ring.fx</li>
+<li>toomModel.fx</li>
+<li>SkyCubeMap.fx</li>
+</ul>
+</details>
+<br>
+<h1 id="4-%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E5%81%B4%E3%81%AE%E6%94%B9%E9%80%A0%E3%81%97%E3%81%9F%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89"><strong>4. エンジン側の改造したソースコード</strong></h1>
+<details><summary>ソースコード</summary>
+<ul>
+<li>CharacterController
+<ul>
+<li>CharacterController.cpp<br>
+※接触している面の法線を取得できるように変更</li>
+</ul>
+</li>
+<li>Matrix
+<ul>
+<li>Matrix.h<br>
+※行列同士の比較がするために==を使えるように変更</li>
+</ul>
+</li>
+<li>Vector
+<ul>
+<li>Vector.h<br>
+※Vector4クラスにLerp関数を追加し、線形補間をできるように変更</li>
+</ul>
+</li>
+</ul>
+</details>
+<br>
+<h1 id="5-%E6%8A%80%E8%A1%93%E7%B4%B9%E4%BB%8B"><strong>5. 技術紹介</strong></h1>
+<font size="3">
+<h2 id="51-%E4%B8%96%E7%95%8C%E3%81%AE%E5%9B%9E%E8%BB%A2"><strong>5.1. 世界の回転</strong></h2>
+</font>
+<h2 id="%E5%9B%9E%E8%BB%A2%E6%96%B9%E6%B3%95">回転方法</h2>
+<font size = "3">
+<ol>
+<li>回転に使用する回転行列を作成する。</li>
+<li>プレイヤーのワールド行列から平行移動成分を抽出し行列とする。</li>
+<li>2で作成した平行移動行列から逆行列を計算する。</li>
+<li>回転させるオブジェクトのワールド行列に対して、3で計算したプレイヤーの平行移動行列の逆行列を乗算する。</li>
+<li>4で計算された行列に対して、1で作成した回転行列を乗算する。</li>
+<li>5で計算された行列に対して、2で計算したプレイヤーの平行移動行列を乗算する。
+</font>
+<br>
+<br></li>
+</ol>
+<font size = "4">
+<h3 id="4-%E5%9B%9E%E8%BB%A2%E3%81%95%E3%81%9B%E3%82%8B%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E8%A1%8C%E5%88%97%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A63%E3%81%A7%E8%A8%88%E7%AE%97%E3%81%97%E3%81%9F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E5%B9%B3%E8%A1%8C%E7%A7%BB%E5%8B%95%E8%A1%8C%E5%88%97%E3%81%AE%E9%80%86%E8%A1%8C%E5%88%97%E3%82%92%E4%B9%97%E7%AE%97%E3%81%99%E3%82%8B">4. 回転させるオブジェクトのワールド行列に対して、3で計算したプレイヤーの平行移動行列の逆行列を乗算する。</h3>
+</font>
+<br>
+<br>
+<p><strong>プレイヤーの平行移動行列の逆行列</strong> とは、 <strong>「プレイヤーの平行移動行列に乗算するとプレイヤーがワールド座標の原点に移動する行列」</strong> のことです。</p>
+<img alt="inverseMatrix" src="image/inverseMatrix.png">
+<p>よってプレイヤーの平行移動行列の逆行列を乗算した場合、オブジェクトがこのように移動する。
+<img alt="multiply_1" src="image/multiply_1.png"><br>
+この座標はプレイヤーが世界の原点であると仮定した場合の座標となる。</p>
+<br>
+<font size = "4">
+<h3 id="5-4%E3%81%A7%E8%A8%88%E7%AE%97%E3%81%95%E3%82%8C%E3%81%9F%E8%A1%8C%E5%88%97%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A61%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%9B%9E%E8%BB%A2%E8%A1%8C%E5%88%97%E3%82%92%E4%B9%97%E7%AE%97%E3%81%99%E3%82%8B">5. 4で計算された行列に対して、1で作成した回転行列を乗算する。</h3>
+</font>
+<p>オブジェクトを90度回転させる回転行列の場合
+<img alt="multiply_2" src="image/multiply_2.png">
+ワールド座標の原点を中心として回転するため、
+<font size="3"></p>
+<p><strong>乗算前のワールド座標と乗算後のワールド座標では原点に対しての距離が変わらない。</strong><br>
+</font>
+<br></p>
+<font size ="4">
+<h3 id="6-5%E3%81%A7%E8%A8%88%E7%AE%97%E3%81%95%E3%82%8C%E3%81%9F%E8%A1%8C%E5%88%97%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A62%E3%81%A7%E8%A8%88%E7%AE%97%E3%81%97%E3%81%9F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E5%B9%B3%E8%A1%8C%E7%A7%BB%E5%8B%95%E8%A1%8C%E5%88%97%E3%82%92%E4%B9%97%E7%AE%97%E3%81%99%E3%82%8B">6. 5で計算された行列に対して、2で計算したプレイヤーの平行移動行列を乗算する。</h3>
+</font>
+<img alt="multiply_3" src="image/multiply_3.png">
+プレイヤーの平行移動行列を乗算する理由としては、現在はプレイヤーを世界の原点と仮定した計算を行ったワールド座標となっているため、プレイヤーの平行移動行列の逆行列の逆行列である、プレイヤーの平行移動行列を乗算することで、世界の原点を元のワールド座標の原点とした時のワールド座標にしている。
+<br>
+<br>
+<font size ="4">
+<h3 id="%E8%A8%88%E7%AE%97%E5%BE%8C">計算後</h3>
+</font>
+<img alt="afterRotation" src="image/afterRotation.png">
+<font size = "3">
+<h2 id="52-pbr"><strong>5.2. PBR</strong></h2>
+</font>
+<font size = "3">
+<h2 id="53-%E8%BC%AA%E9%83%AD%E7%B7%9A"><strong>5.3. 輪郭線</strong></h2>
+</font>  
+このゲームでは、
+<ul>
+<li>ポストエフェクトによる輪郭線</li>
+<li>フロントカリングを行ったモデルで作る輪郭線</li>
+</ul>
+<p>の2種類が実装されているハイブリッド輪郭線となっています。</p>
+<h3 id="2%E7%A8%AE%E9%A1%9E%E3%81%AB%E3%81%99%E3%82%8B%E5%88%A9%E7%82%B9"><strong>2種類にする利点</strong></h3>
+
+</body>
+</html>
