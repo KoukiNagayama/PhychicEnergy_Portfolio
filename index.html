@@ -839,13 +839,14 @@ code {
 <h3 id="%E8%A8%88%E7%AE%97%E5%BE%8C">計算後</h3>
 </font>
 <p> <img alt="afterRotation" src="image/afterRotation.png"></p>
+<br>
 <font size = "3">
 <h2 id="53-%E8%BC%AA%E9%83%AD%E7%B7%9A"><strong>5.3. 輪郭線</strong></h2>
 </font>  
 このゲームでは、
 <ul>
 <li>ポストエフェクトによる輪郭線</li>
-<li>フロントカリングを行ったモデルを法線方向に拡張して作る輪郭線</li>
+<li>フロントカリングを行ったモデルを法線方向に拡張して作る背面モデル輪郭線</li>
 </ul>
 <p>の2種類が実装されているハイブリッド輪郭線となっている。</p>
 <h3 id="2%E7%A8%AE%E9%A1%9E%E3%81%AB%E3%81%99%E3%82%8B%E5%88%A9%E7%82%B9"><strong>2種類にする利点</strong></h3>
@@ -866,12 +867,36 @@ code {
 <br>
 <font size="3">
 <p><strong>[対象とカメラが遠い場合]</strong>
- <img alt="outlineComparison_far" src="image/outlineComparison_far.png"></p>
-<br>
-<p><strong>[対象とカメラが近い場合]</strong>
- <img alt="outlineComparison_near" src="image/outlineComparison_near.png"></p>
+ <img alt="outlineComparison_far" src="image/outlineComparison_far.png"><br>
 </font>
-よって、対象がカメラから近い時はフロントカリングを行ったモデルから作った輪郭線がポストエフェクトによる輪郭線よりも大きくなり、最終的に描画された時に見やすい。逆に対象がカメラから遠い場合には、ポストエフェクトの輪郭線の方が大きくなり、最終的に描画された時に最低限の輪郭線の大きさを失わない。  
+背面モデルの輪郭線が小さくてもポストエフェクトの輪郭線がある為、最低限の大きさが確保されており、見えやすい。</p>
+<br>
+<font size="3">
+<p><strong>[対象とカメラが近い場合]</strong>
+ <img alt="outlineComparison_near" src="image/outlineComparison_near.png"><br>
+</font>
+背面モデルが目立つようになっている為、ポストエフェクトが見えなくなっている。</p>
+<br>
+<h2 id="%E6%89%8B%E9%A0%86">手順</h2>
+<font size="3">
+<ul>
+<li>ポストエフェクト</li>
+</ul>
+<ol>
+<li>輪郭線を適用するオブジェクトの深度値をレンダリングテクスチャに書き込む。</li>
+<li>1で深度値を書き込んだレンダリングテクスチャから対象ピクセルの周りのピクセルとの深度の違いを検出する。</li>
+<li>深度の違いの平均が大きい場合は対象ピクセルは輪郭であると判断する。</li>
+<li>輪郭であると判断された場合には、ピクセルを塗りつぶす。</li>
+</ol>
+<ul>
+<li>背面モデル</li>
+</ul>
+<ol>
+<li>輪郭線を適用するオブジェクトのモデルと同じモデルをフロントカリングして同じ座標に設定する。</li>
+<li>法線方向に拡張する。</li>
+<li>モデルを全て黒で出力する。</li>
+</ol>
+</font>
 <br>
 <font size = "3">
 <h2 id="54-%E3%83%95%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%AB%E3%83%AA%E3%83%B3%E3%82%B0"><strong>5.4. フラスタムカリング</strong></h2>
