@@ -9,7 +9,7 @@
 <body style="background-color: #gray">
 <div class="bg-gray">
 
-# **PhychicEnergy**
+# **PsychicEnergy**
 
 河原電子ビジネス専門学校  
 
@@ -41,7 +41,7 @@
 <br>.
 
 # **1. 作品概要**
-## **PhychicEnergy**
+## **PsychicEnergy**
 &emsp;三人称視点のタイムアタック型のアクションゲームです。  
 &emsp;プレイヤーはモードを変更することで浮遊することができます。  
 &emsp;浮遊状態の時にオブジェクトに向かって飛ぶことによってぶつかった場所に張り付くことができます。  
