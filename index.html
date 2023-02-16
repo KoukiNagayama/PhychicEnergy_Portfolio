@@ -389,8 +389,7 @@ code {
 5.2. <a href="#52-%E8%BC%AA%E9%83%AD%E7%B7%9A">輪郭線</a><br>
 5.3. <a href="#53-%E3%83%95%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%AB%E3%83%AA%E3%83%B3%E3%82%B0">フラスタムカリング</a><br>
 5.4. <a href="#54-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6">カスケードシャドウ</a><br>
-5.5. <a href="">トゥーンシェーディング</a><br>
-5.6. <a href=""></a></li>
+5.5. <a href="#">トゥーンシェーディング</a></li>
 <li><a href="#6-%E3%81%93%E3%81%A0%E3%82%8F%E3%81%A3%E3%81%9F%E7%82%B9">こだわった点</a><br>
 6.1. <a href="#61-%E4%B8%96%E7%95%8C%E3%82%92%E5%9B%9E%E8%BB%A2%E3%81%95%E3%81%9B%E3%81%9F%E7%90%86%E7%94%B1">世界を回転させた理由</a><br>
 6.2. <a href="#62-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AE%E8%BB%BD%E3%82%84%E3%81%8B%E3%81%95">プレイヤーの動きの軽やかさ</a><br>
@@ -478,7 +477,7 @@ code {
 <li>
 <p>URL</p>
 <ul>
-<li><a href="https://github.com/KoukiNagayama/PhychicEnergy">GitHub</a></li>
+<li><a href="https://github.com/KoukiNagayama/PsychicEnergy">GitHub</a></li>
 </ul>
 </li>
 </ul>
@@ -502,8 +501,8 @@ code {
 <li>Aボタン - ジャンプ</li>
 </ul>
 </font>
-<p> <img alt="操作説明_左" src="image/controllerOperation_left.png"></p>
-<p> <img alt="操作説明_右" src="image/controllerOperation_right.png"></p>
+<p> <img alt="操作説明_左" src="image/controllerOperation_left.png" width="700px"></p>
+<p> <img alt="操作説明_右" src="image/controllerOperation_right.png" width="700px"></p>
 <h1 id="3-%E6%8B%85%E5%BD%93%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89"><strong>3. 担当ソースコード</strong></h1>
 <details><summary>メイン側ソースコード(.h , .cpp)</summary>
 <ul>
@@ -814,16 +813,16 @@ code {
 <br>
 <br>
 <p><strong>プレイヤーの平行移動行列の逆行列</strong> とは、 <strong>「プレイヤーの平行移動行列に乗算するとプレイヤーがワールド座標の原点に移動する行列」</strong> のことです。</p>
-<p> <img alt="inverseMatrix" src="image/inverseMatrix.png"></p>
+<p> <img alt="inverseMatrix" src="image/inverseMatrix.png" width="1000px"></p>
 <p>よってプレイヤーの平行移動行列の逆行列を乗算した場合、オブジェクトがこのように移動する。</p>
-<p> <img alt="multiply_1" src="image/multiply_1.png"></p>
+<p> <img alt="multiply_1" src="image/multiply_1.png" width="1000px"></p>
 <p>この座標はプレイヤーが世界の原点であると仮定した場合の座標となる。</p>
 <br>
 <font size = "4">
 <h3 id="5-4%E3%81%A7%E8%A8%88%E7%AE%97%E3%81%95%E3%82%8C%E3%81%9F%E8%A1%8C%E5%88%97%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A61%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%9B%9E%E8%BB%A2%E8%A1%8C%E5%88%97%E3%82%92%E4%B9%97%E7%AE%97%E3%81%99%E3%82%8B">5. 4で計算された行列に対して、1で作成した回転行列を乗算する。</h3>
 </font>
 <p>オブジェクトを90度回転させる回転行列の場合</p>
-<p> <img alt="multiply_2" src="image/multiply_2.png"></p>
+<p> <img alt="multiply_2" src="image/multiply_2.png" width="1000px"></p>
 <p>ワールド座標の原点を中心として回転するため、
 <font size="3"></p>
 <p><strong>乗算前のワールド座標と乗算後のワールド座標では原点に対しての距離が変わらない。</strong><br>
@@ -832,13 +831,13 @@ code {
 <font size ="4">
 <h3 id="6-5%E3%81%A7%E8%A8%88%E7%AE%97%E3%81%95%E3%82%8C%E3%81%9F%E8%A1%8C%E5%88%97%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A62%E3%81%A7%E8%A8%88%E7%AE%97%E3%81%97%E3%81%9F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E5%B9%B3%E8%A1%8C%E7%A7%BB%E5%8B%95%E8%A1%8C%E5%88%97%E3%82%92%E4%B9%97%E7%AE%97%E3%81%99%E3%82%8B">6. 5で計算された行列に対して、2で計算したプレイヤーの平行移動行列を乗算する。</h3>
 </font>
-<p> <img alt="multiply_3" src="image/multiply_3.png"></p>
+<p> <img alt="multiply_3" src="image/multiply_3.png" width="1000px"></p>
 <p>プレイヤーの平行移動行列を乗算する理由としては、現在はプレイヤーを世界の原点と仮定した計算を行ったワールド座標となっているため、プレイヤーの平行移動行列の逆行列の逆行列である、プレイヤーの平行移動行列を乗算することで、世界の原点を元のワールド座標の原点とした時のワールド座標にしている。<br>
 <br>
 <font size ="4"></p>
 <h3 id="%E8%A8%88%E7%AE%97%E5%BE%8C">計算後</h3>
 </font>
-<p> <img alt="afterRotation" src="image/afterRotation.png"></p>
+<p> <img alt="afterRotation" src="image/afterRotation.png" width="1000px"></p>
 <br>
 <font size = "3">
 <h2 id="52-%E8%BC%AA%E9%83%AD%E7%B7%9A"><strong>5.2. 輪郭線</strong></h2>
@@ -867,13 +866,13 @@ code {
 <br>
 <font size="3">
 <p><strong>[対象とカメラが遠い場合]</strong>
- <img alt="outlineComparison_far" src="image/outlineComparison_far.png"><br>
+ <img alt="outlineComparison_far" src="image/outlineComparison_far.png" width="1000px"><br>
 </font>
 背面モデルの輪郭線が小さくてもポストエフェクトの輪郭線がある為、最低限の大きさが確保されており、見えやすい。</p>
 <br>
 <font size="3">
 <p><strong>[対象とカメラが近い場合]</strong>
- <img alt="outlineComparison_near" src="image/outlineComparison_near.png"><br>
+ <img alt="outlineComparison_near" src="image/outlineComparison_near.png" width="1000px"><br>
 </font>
 背面モデルが目立つようになっている為、ポストエフェクトが見えなくなっている。</p>
 <br>
@@ -904,7 +903,7 @@ code {
 このゲームでは、オブジェクトを多く配置しているため、1フレームで全てを描画していると処理落ちしてしまうため、必要なオブジェクトは描画しないように減らす必要がある。
 <br>
 <p>フラスタムカリングは、カメラからの視錐台の範囲内にオブジェクトのAABB(軸平行境界ボックス)の頂点があるかどうかを判断し、それによって描画するかどうかを確定する。</p>
-<p> <img alt="frustumCulling" src="image/frustumCulling.png"></p>
+<p> <img alt="frustumCulling" src="image/frustumCulling.png" width="1000px"></p>
 <h2 id="%E6%89%8B%E9%A0%86">手順</h2>
 <font size="3">
 <ol>
@@ -935,12 +934,31 @@ code {
 <li>6で求めた座標を用いて、ピクセルがどのシャドウマップに含まれているかを確定させて、影を落とす。</li>
 </ol>
 </font>
+<br>
+<font size="3">
+<h2 id="55-%E3%83%88%E3%82%A5%E3%83%BC%E3%83%B3%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0"><strong>5.5 トゥーンシェーディング</strong></h2>
+</font>
+ディレクションライトと法線の方向の違いによってランプテクスチャから値を抽出し、乗算する。　
+<br>
+<p><strong>使用したランプテクスチャ</strong>
+ <img alt="rampTexture" src="image/rampTexture.png" width="700px"></p>
+<br>
+<h2 id="%E6%89%8B%E9%A0%86">手順</h2>
+<font size="3">
+<ol>
+<li>ディレクションライトと法線の方向の内積を取る</li>
+<li>1で得た値の範囲は-1～1となっているため、0.5を乗算し、0.5を加算することで、0～1の範囲に変える。</li>
+<li>2で計算した値を使ってランプテクスチャから色を抽出する。</li>
+<li>抽出した値を出力するカラーに乗算する。
+</font></li>
+</ol>
+<br>
 <h1 id="6-%E3%81%93%E3%81%A0%E3%82%8F%E3%81%A3%E3%81%9F%E7%82%B9"><strong>6. こだわった点</strong></h1>
 <font size="3">
 <h2 id="61-%E4%B8%96%E7%95%8C%E3%82%92%E5%9B%9E%E8%BB%A2%E3%81%95%E3%81%9B%E3%81%9F%E7%90%86%E7%94%B1"><strong>6.1. 世界を回転させた理由</strong></h2>
 </font>
 <p>始めはプレイヤーに合わせて世界を回転させる手法ではなく、プレイヤー自体を回転させるという手法に挑戦していた。プレイヤー自体を回転させるということは「プレイヤーの当たり判定を逐一変化する」ということとなるため、ある角度では壁や床の判定が取れていなかったり、めり込まないような修正ができていなかったりなどの問題が発生した。<br>
-そのため、<strong>世界側を回転させることで、プレイヤーの当たり判定を変化させなくともよい</strong>ということになった。</p>
+そのため、<strong>世界側を回転させることで、プレイヤーの当たり判定を変化させなくともプレイヤーを回転させた時と同じ動作ができるようになった</strong>。</p>
 <br>
 <font size="3">
 <h2 id="62-%E3%83%AD%E3%83%83%E3%82%AF%E3%82%AA%E3%83%B3%E6%A9%9F%E8%83%BD"><strong>6.2. ロックオン機能</strong></h2>
@@ -960,17 +978,21 @@ code {
 <font size="3">
 <h2 id="63-%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AB%E3%82%88%E3%82%8B%E3%82%B9%E3%83%88%E3%83%AC%E3%82%B9%E3%82%92%E6%B8%9B%E3%82%89%E3%81%99%E3%81%9F%E3%82%81%E3%81%AB"><strong>6.3. カメラによるストレスを減らすために</strong></h2>
 </font>
-<h2 id="%E6%89%8B%E9%A0%86">手順</h2>
-<font size="3">
-<ol>
-<li></li>
-</ol>
+<p>浮遊時から通常時に移行する際にカメラが強制的に浮遊用から通常用に切り替わるため、処理によってはプレイヤーが思い描いた動きをできない時がある。<br>
+そのため、プレイヤーを想定した制御をするようにした。
+注目した点としては、</p>
+<ul>
+<li>プレイヤーはどういう意図で、カメラを向けているのか</li>
+<li>プレイヤーが強制されると嫌なカメラの動きとは</li>
+</ul>
+<p>の2つとなっています。</p>
+<br>
+では、
 </font>
 <font size="3">
 <h2 id="62-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AE%E8%BB%BD%E3%82%84%E3%81%8B%E3%81%95"><strong>6.2. プレイヤーの動きの軽やかさ</strong></h2>
 </font>
 このゲームは、プレイヤーが浮遊をすることや壁に張り付くことなど通常の床に触れている時間が非常に少ない。そのため、プレイするユーザー自身もプレイをしていて「ふわっ」というような感覚を味わえるようにプレイヤーのジャンプや浮遊状態の時は上昇中や下降中は素早く、最高到達点での動きはゆっくりとなるようにしている。
-<p>ランプテクスチャ</p>
 </div>
 
 </body>
