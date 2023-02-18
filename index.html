@@ -379,24 +379,57 @@ code {
 <p>ゲームクリエイター科2年　長山宏毅</p>
 <h1 id="%E7%9B%AE%E6%AC%A1"><strong>目次</strong></h1>
 <font size = "3">
-<ol>
-<li><a href="#1-%E4%BD%9C%E5%93%81%E6%A6%82%E8%A6%81">作品概要</a></li>
-<li><a href="#2-%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E">操作説明</a></li>
-<li><a href="#3-%E6%8B%85%E5%BD%93%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">担当ソースコード</a></li>
-<li><a href="#4-%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E5%81%B4%E3%81%AE%E6%94%B9%E9%80%A0%E3%81%97%E3%81%9F%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">エンジン側の改造したソースコード</a></li>
-<li><a href="#5-%E6%8A%80%E8%A1%93%E7%B4%B9%E4%BB%8B">技術紹介</a><br>
-5.1. <a href="#51-%E4%B8%96%E7%95%8C%E3%81%AE%E5%9B%9E%E8%BB%A2">世界の回転</a><br>
-5.2. <a href="#52-%E8%BC%AA%E9%83%AD%E7%B7%9A">輪郭線</a><br>
-5.3. <a href="#53-%E3%83%95%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%AB%E3%83%AA%E3%83%B3%E3%82%B0">フラスタムカリング</a><br>
-5.4. <a href="#54-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6">カスケードシャドウ</a><br>
-5.5. <a href="#">トゥーンシェーディング</a></li>
-<li><a href="#6-%E3%81%93%E3%81%A0%E3%82%8F%E3%81%A3%E3%81%9F%E7%82%B9">こだわった点</a><br>
-6.1. <a href="#61-%E4%B8%96%E7%95%8C%E3%82%92%E5%9B%9E%E8%BB%A2%E3%81%95%E3%81%9B%E3%81%9F%E7%90%86%E7%94%B1">世界を回転させた理由</a><br>
-6.2. <a href="#62-%E3%83%AD%E3%83%83%E3%82%AF%E3%82%AA%E3%83%B3%E6%A9%9F%E8%83%BD">ロックオン機能</a><br>
-6.3. <a href="#63-%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AB%E3%82%88%E3%82%8B%E3%82%B9%E3%83%88%E3%83%AC%E3%82%B9%E3%82%92%E6%B8%9B%E3%82%89%E3%81%99%E3%81%9F%E3%82%81%E3%81%AB">カメラによるストレスを減らすために</a><br>
-6.4. <a href="#64-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AE%E8%BB%BD%E3%82%84%E3%81%8B%E3%81%95">プレイヤーの動きの軽やかさ</a><br>
-6.5. <a href="">VRoidのモデルを使用</a></li>
-</ol>
+<ul>
+<li><a href="#psychicenergy"><strong>PsychicEnergy</strong></a></li>
+<li><a href="#%E7%9B%AE%E6%AC%A1"><strong>目次</strong></a></li>
+<li><a href="#1-%E4%BD%9C%E5%93%81%E6%A6%82%E8%A6%81"><strong>1. 作品概要</strong></a>
+<ul>
+<li><a href="#psychicenergy-1"><strong>PsychicEnergy</strong></a></li>
+</ul>
+</li>
+<li><a href="#2-%E6%93%8D%E4%BD%9C%E8%AA%AC%E6%98%8E"><strong>2. 操作説明</strong></a>
+<ul>
+<li><a href="#xbox%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC"><strong>Xboxコントローラー</strong></a></li>
+</ul>
+</li>
+<li><a href="#3-%E6%8B%85%E5%BD%93%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89"><strong>3. 担当ソースコード</strong></a></li>
+<li><a href="#4-%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3%E5%81%B4%E3%81%AE%E6%94%B9%E9%80%A0%E3%81%97%E3%81%9F%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89"><strong>4. エンジン側の改造したソースコード</strong></a></li>
+<li><a href="#5-%E6%8A%80%E8%A1%93%E7%B4%B9%E4%BB%8B"><strong>5. 技術紹介</strong></a>
+<ul>
+<li><a href="#51-%E4%B8%96%E7%95%8C%E3%81%AE%E5%9B%9E%E8%BB%A2"><strong>5.1. 世界の回転</strong></a></li>
+<li><a href="#%E5%9B%9E%E8%BB%A2%E6%96%B9%E6%B3%95">回転方法</a>
+<ul>
+<li><a href="#4-%E5%9B%9E%E8%BB%A2%E3%81%95%E3%81%9B%E3%82%8B%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E8%A1%8C%E5%88%97%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A63%E3%81%A7%E8%A8%88%E7%AE%97%E3%81%97%E3%81%9F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E5%B9%B3%E8%A1%8C%E7%A7%BB%E5%8B%95%E8%A1%8C%E5%88%97%E3%81%AE%E9%80%86%E8%A1%8C%E5%88%97%E3%82%92%E4%B9%97%E7%AE%97%E3%81%99%E3%82%8B">4. 回転させるオブジェクトのワールド行列に対して、3で計算したプレイヤーの平行移動行列の逆行列を乗算する。</a></li>
+<li><a href="#5-4%E3%81%A7%E8%A8%88%E7%AE%97%E3%81%95%E3%82%8C%E3%81%9F%E8%A1%8C%E5%88%97%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A61%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%9B%9E%E8%BB%A2%E8%A1%8C%E5%88%97%E3%82%92%E4%B9%97%E7%AE%97%E3%81%99%E3%82%8B">5. 4で計算された行列に対して、1で作成した回転行列を乗算する。</a></li>
+<li><a href="#6-5%E3%81%A7%E8%A8%88%E7%AE%97%E3%81%95%E3%82%8C%E3%81%9F%E8%A1%8C%E5%88%97%E3%81%AB%E5%AF%BE%E3%81%97%E3%81%A62%E3%81%A7%E8%A8%88%E7%AE%97%E3%81%97%E3%81%9F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E5%B9%B3%E8%A1%8C%E7%A7%BB%E5%8B%95%E8%A1%8C%E5%88%97%E3%82%92%E4%B9%97%E7%AE%97%E3%81%99%E3%82%8B">6. 5で計算された行列に対して、2で計算したプレイヤーの平行移動行列を乗算する。</a></li>
+<li><a href="#%E8%A8%88%E7%AE%97%E5%BE%8C">計算後</a></li>
+</ul>
+</li>
+<li><a href="#52-%E8%BC%AA%E9%83%AD%E7%B7%9A"><strong>5.2. 輪郭線</strong></a>
+<ul>
+<li><a href="#2%E7%A8%AE%E9%A1%9E%E3%81%AB%E3%81%99%E3%82%8B%E5%88%A9%E7%82%B9"><strong>2種類にする利点</strong></a></li>
+</ul>
+</li>
+<li><a href="#%E6%89%8B%E9%A0%86">手順</a></li>
+<li><a href="#53-%E3%83%95%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%AB%E3%83%AA%E3%83%B3%E3%82%B0"><strong>5.3. フラスタムカリング</strong></a></li>
+<li><a href="#%E6%89%8B%E9%A0%86-1">手順</a></li>
+<li><a href="#54-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A3%E3%83%89%E3%82%A6"><strong>5.4. カスケードシャドウ</strong></a></li>
+<li><a href="#%E6%89%8B%E9%A0%86-2">手順</a></li>
+<li><a href="#55-%E3%83%88%E3%82%A5%E3%83%BC%E3%83%B3%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0"><strong>5.5 トゥーンシェーディング</strong></a></li>
+<li><a href="#%E6%89%8B%E9%A0%86-3">手順</a></li>
+</ul>
+</li>
+<li><a href="#6-%E3%81%93%E3%81%A0%E3%82%8F%E3%81%A3%E3%81%9F%E7%82%B9"><strong>6. こだわった点</strong></a>
+<ul>
+<li><a href="#61-%E4%B8%96%E7%95%8C%E3%82%92%E5%9B%9E%E8%BB%A2%E3%81%95%E3%81%9B%E3%81%9F%E7%90%86%E7%94%B1"><strong>6.1. 世界を回転させた理由</strong></a></li>
+<li><a href="#62-%E3%83%AD%E3%83%83%E3%82%AF%E3%82%AA%E3%83%B3%E6%A9%9F%E8%83%BD"><strong>6.2. ロックオン機能</strong></a></li>
+<li><a href="#63-%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AB%E3%82%88%E3%82%8B%E3%82%B9%E3%83%88%E3%83%AC%E3%82%B9%E3%82%92%E6%B8%9B%E3%82%89%E3%81%99%E3%81%9F%E3%82%81%E3%81%AB"><strong>6.3. カメラによるストレスを減らすために</strong></a></li>
+<li><a href="#64-%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%81%AE%E5%8B%95%E3%81%8D%E3%81%AE%E8%BB%BD%E3%82%84%E3%81%8B%E3%81%95"><strong>6.4. プレイヤーの動きの軽やかさ</strong></a></li>
+<li><a href="#65-vroid%E3%81%AE%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E4%BD%BF%E7%94%A8"><strong>6.5. VRoidのモデルを使用</strong></a></li>
+<li><a href="#%E6%89%8B%E9%A0%86-4">手順</a></li>
+</ul>
+</li>
+</ul>
 </font>
 <p><br>.</p>
 <h1 id="1-%E4%BD%9C%E5%93%81%E6%A6%82%E8%A6%81"><strong>1. 作品概要</strong></h1>
@@ -867,16 +900,16 @@ code {
 </ul>
 <br>
 <font size="3">
-<p><strong>[対象とカメラが遠い場合]</strong>
- <img alt="outlineComparison_far" src="image/outlineComparison_far.png" width="1000px"><br>
+<p><strong>[対象とカメラが遠い場合]</strong></p>
+<p> <img alt="outlineComparison_far" src="image/outlineComparison_far.png" width="1000px"><br>
 </font>
 背面モデルの輪郭線が小さくてもポストエフェクトの輪郭線がある為、最低限の大きさが確保されており、見えやすい。</p>
 <br>
 <font size="3">
-<p><strong>[対象とカメラが近い場合]</strong>
- <img alt="outlineComparison_near" src="image/outlineComparison_near.png" width="1000px"><br>
+<p><strong>[対象とカメラが近い場合]</strong></p>
+<p> <img alt="outlineComparison_near" src="image/outlineComparison_near.png" width="1000px"><br>
 </font>
-背面モデルが目立つようになっている為、あまりポストエフェクトの輪郭線が見えなくなっている。</p>
+背面モデルが太く見えるようになっている為、ポストエフェクトの輪郭線はあまり見えなくなっている。</p>
 <br>
 <h2 id="%E6%89%8B%E9%A0%86">手順</h2>
 <font size="3">
